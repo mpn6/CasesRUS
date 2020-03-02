@@ -1,0 +1,199 @@
+html, body{
+    min-height: 100%;
+    margin:0 auto;
+    padding:0;
+    background: #e7e7e7;
+}
+.navbar {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+    background-color: #666;
+    color: white;
+}
+
+.navbar .title a{
+    font-size: 25px;
+    margin: auto;
+    padding-bottom: 0;
+    color: black;
+}
+
+.carousel{
+    background-color: white;
+}
+
+.app-container {
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    min-height: 100%;
+}
+
+.content-container {
+    flex: 1 1 auto;
+    width: 100%;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #b3b3b3;
+}
+
+.content-container .card {
+    height: 195px;
+    flex: 0 0 195px;
+    background-color: #bfbfbf;
+    border: 3px solid #333;
+    margin: 5px;
+}
+
+footer {
+    background-color: #666666;
+    overflow: hidden;
+    width: 1023px;
+    margin: auto;
+}
+.footerFloat {
+    width: 30%;
+    float: left;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.left{
+    text-align:left;
+    float:left;
+}
+.right{
+    float:right;
+    text-align:right;
+}
+.centered{
+    text-align:center;
+}
+
+.filter-list{
+    flex: 0 0 50px;
+    background-color: #efefef;
+}
+
+.list-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product-list {
+    display: flex;
+    background-color: #c0c0c0;
+}
+
+/*Modeling after cards in the media queries example*/
+.product-list .card {
+    height: 260px;
+    flex: 0 0 225px;
+    background-color: white;
+    margin: 15px;
+    border: 3px solid #333;
+}
+
+/*formatting the pictures to fit inside the cards */
+.product-list .card img {
+    width: 100%;
+    height: 200px;
+}
+
+/*formatting the information for each card i.e. name + price*/
+.product-list .card .info {
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    background-color: #a7a7a7;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .app-container {
+        flex-direction: column;
+        width: 900px;
+    }
+
+    .filter-list {
+        display: flex;
+        align-items: center;
+    }
+
+    .product-list .card {
+        flex-basis: 300px;
+    }
+
+    .product-list {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1000px) {
+    .app-container {
+        width: 720px; /*set the app container to be a little smaller than the smallest screen size*/
+    }
+}
+
+@media only screen and (max-width: 749px) {
+    .app-container {
+        margin: 0 15px;
+        width: calc(100% - 30px);
+    }
+
+    .content-container {
+        width: calc(100% - 50px);
+    }
+
+    .product-list .card {
+        display: flex;
+        height: 50px;
+        flex-basis: calc(100% - 25px);
+    }
+
+    .product-list .card img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .product-list .card .info{
+        height: 30px;
+        flex: auto;
+    }
+    footer{
+    width: 100%;
+    margin: auto;
+}
+    .footerFloat {
+        width: 100%;
+    }
+}

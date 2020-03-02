@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <aside class="navbar">
+        Cases R Us
+        <a href="productList.html" class="right active">Product List</a>
+        <a href="index.html" class="right">Home</a>
+    </aside>
+    <div class="app-container">
+        <div class = "product-list">
+            <aside class="filter-list">
+                <br><br>
+
+                <label for="orderBy">Order By</label>
+                <select id="orderBy" name="orderBy">
+                    <option value="name">Name</option>
+                    <option value="price">Price</option>
+                </select>
+
+                <br><br>
+
+                <label for="priceRange">Price Range</label>
+                <select id="priceRange" name="priceRange">
+                    <option value="">Select Price Range</option>
+                    <option value="1">$1-$10</option>
+                    <option value="2">$11-$20</option>
+                    <option value="3">$20 and up</option>
+                </select>
+
+                <br><br>
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="">Select Category</option>
+                    <option value="solid">Solid Colors</option>
+                    <option value="design">Designed Cases</option>
+                </select>
+            </aside>
+
+            <div class="list-data">
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerFloat">Cases R Us, LLC<br><br></div>
+        <div class="footerFloat">123-456-7890<br><br></div>
+        <div class="footerFloat">123 Fake Avenue<br>Hoboken, NJ 07030<br></div>
+
+    </footer>
+
+
+</body>
+<script type="text/javascript" src="productList.js"></script>
+</html>
