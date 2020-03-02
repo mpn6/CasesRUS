@@ -181,6 +181,11 @@ footer {
         width: calc(100% - 50px);
     }
 
+    .filter-list{
+        display: flex;
+        width: 100%;
+    }
+
     .product-list .card {
         display: flex;
         height: 50px;
